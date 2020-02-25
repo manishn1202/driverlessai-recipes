@@ -72,7 +72,7 @@ class PctOverNLastDaysTransformer(CustomTransformer):
         super().__init__(**kwargs)
         self.col_date = "event_ts"
         # Init groupby columns, KEEP customer_id first !
-        self.col_group = ["customer_id", "x1"]
+        self.col_group = ["customer_id"]
         self.target_positive = "Yes"
 
         # the number of DAYS or Rows we want to look back
